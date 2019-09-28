@@ -1,0 +1,2 @@
+include ':Calculatrice', ':The-wall-street-journal'
+rootProject.name='AndroidTP'

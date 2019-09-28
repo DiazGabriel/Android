@@ -10,7 +10,7 @@ import com.example.exemple.R
 class ArticleAdapter(private val dataset: List<Article>) : RecyclerView.Adapter<ArticleAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int {
-       return dataset.size
+        return dataset.size
     }
 
     class ViewHolder(val root: View) : RecyclerView.ViewHolder(root) {
@@ -33,5 +33,3 @@ class ArticleAdapter(private val dataset: List<Article>) : RecyclerView.Adapter<
     }
 
 }
-
-data class Article(val description: String, val title: String)

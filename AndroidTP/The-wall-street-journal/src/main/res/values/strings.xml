@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Exemple</string>
+    <string name="app_name">The Wall Street Journal</string>
     <string-array name="planetes">
         <item>Mercure</item>
         <item>Lune</item>

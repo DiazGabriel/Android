@@ -17,6 +17,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        bindFragment()
+    }
+
+    private fun bindFragment() {
 
         //créer une instance du fragment
         val fragment = ArticlesFragment()
@@ -25,13 +29,10 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().apply {
             //replacer le précédent fragment, s'il existe
             replace(R.id.fragment_container, fragment)
-
             //ajouter la transaction dans la stack
             addToBackStack(null)
             //finalement, on valide la transaction
         }.commit()
-
     }
 }
-
 

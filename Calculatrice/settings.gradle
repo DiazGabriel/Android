@@ -1,2 +1,0 @@
-include ':app', ':TP2'
-rootProject.name='Calculatrice'
