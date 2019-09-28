@@ -19,7 +19,7 @@ class ArticleAdapter(private val dataset: List<Article>) : RecyclerView.Adapter<
             val txtTitle = root.findViewById<TextView>(R.id.Titre)
             val txtDesc = root.findViewById<TextView>(R.id.Texte)
             txtTitle.text = item.title
-            txtDesc.text = item.description
+            txtDesc.text = item.content
         }
     }
 

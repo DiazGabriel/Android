@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exemple.R
@@ -24,10 +23,7 @@ import kotlinx.coroutines.withContext
 
 class ArticlesFragment : Fragment() {
     private val repository = ArticleRepository()
-    override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_articles, container, false)
     }
 
@@ -63,13 +59,16 @@ class ArticlesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         root = view
         bindRecyclerView(view)
-        bindSpinner(view)
+
+        // Spinner désactivé. On verra ce qu'on en fais plus tard... ou pas
+        // bindSpinner(view)
     }
 
     private fun bindRecyclerView(view: View){
+
         val listArticles = listOf(
-                Article("Article 1", "Cet article est génial"),
-                Article("Article 2", "Cet article est nul.. :-(")
+            Article("Article 1", "Cet article est génial"),
+            Article("Article 2", "Cet article est nul.. :-(")
         )
 
         val recyclerView: RecyclerView = view.findViewById(R.id.recycler_view)
