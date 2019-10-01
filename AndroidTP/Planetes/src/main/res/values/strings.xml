@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Planètes</string>
+    <string-array name="planetes">
+        <item>Sélectionner une planète</item>
+        <item>Mercure</item>
+        <item>Vénus</item>
+        <item>Terre</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturne</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+    <string name="description">Description de la photo</string>
+    <string name="welcomeText">Pour tout savoir sur les planètes de notre univers cliquez sur découvrir</string>
+
+    <string name="Mercure">Mercure est la planète la plus proche du Soleil et la moins massive du Système solaire1. Son éloignement au Soleil est compris entre 0,31 et 0,47 unité astronomique (46 et 70 millions de kilomètres), ce qui correspond à une excentricité orbitale de 0,2 — plus de douze fois supérieure à celle de la Terre, et de loin la plus élevée pour une planète du système solaire. Elle est visible à l\'œil nu depuis la Terre avec un diamètre apparent de 4,5 à 13 secondes d\'arc, et une magnitude apparente de 5,7 à −2,3 ; son observation est toutefois rendue difficile par son élongation toujours inférieure à 28,3° qui la noie le plus souvent dans l\'éclat du Soleil.</string>
+    <string name="Vénus">Vénus est une des quatre planètes telluriques du Système solaire. Elle est la deuxième planète par ordre d\'éloignement au Soleil, et la sixième par masse ou par taille décroissantes. La planète Vénus a été baptisée du nom de la déesse Vénus de la mythologie romaine.</string>
+    <string name="Terre">La Terre est une planète du Système solaire, la troisième plus proche du Soleil et la cinquième plus grande, tant en taille qu en masse, de ce système planétaire dont elle est également la plus massive des planètes telluriques.Elle est composée d\'eau et de matière (roche, terre, ect…).</string>
+    <string name="Mars">Mars est la quatrième planète par ordre de distance croissante au Soleil et la deuxième par masse et par taille croissantes. Son éloignement au Soleil est compris entre 1,381 et 1,666 UA, avec une période orbitale de 669,58 jours martiens.</string>
+    <string name="Jupiter">Jupiter est une planète géante gazeuse. Il s agit de la plus grosse planète du Système solaire, plus volumineuse et massive que toutes les autres planètes réunies, et la cinquième planète par sa distance au Soleil.</string>
+    <string name="Saturne">Saturne est la sixième planète du Système solaire par ordre de distance au Soleil et la deuxième après Jupiter tant par sa taille que par sa masse. Saturne est une planète géante, au même titre que Jupiter, Uranus et Neptune, et plus précisément une géante gazeuse de type Jupiter froid comme Jupiter.</string>
+    <string name="Uranus">Uranus est la septième planète du Système solaire par sa distance au Soleil, la troisième par la taille et la qutrième par la masse. Elle doit son nom à la divinité romaine du ciel Uranus, père de Saturne et grand-père de Jupiter, noms que portent les deux planètes la précédant dans le Système solaire.</string>
+    <string name="Neptune">Neptune est la huitième et dernière planète du Système solaire par distance croissante au Soleil. Neptune orbite autour du Soleil à une distance d\'environ 30 UA, avec une excentricité orbitale moitié moindre que celle de la Terre, en bouclant une révolution complète en 164,79 ans.</string>
+    <string name="buttonDecouvrir">Découvrir</string>
+
+</resources>

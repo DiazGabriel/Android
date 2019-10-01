@@ -1,2 +1,2 @@
-include ':Calculatrice', ':USANews'
+include ':Calculatrice', ':USANews', ':Planetes'
 rootProject.name='AndroidTP'
