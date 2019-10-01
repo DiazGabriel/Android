@@ -1,207 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="9"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintWidth_percent="0.25" />
+    android:background="@android:color/black"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/showCalcul"
-        android:layout_width="0dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="200dp"
-        android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/colorPrimary"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/historique"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.033"
-        app:layout_constraintWidth_percent="0.80" />
+        android:id="@+id/tvExpression"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textColor="@color/numberButton"
+        android:gravity="end"
+        android:ellipsize="start"
+        android:textSize="60sp"
+        android:singleLine="true"/>
 
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="9"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintStart_toEndOf="@+id/button8" />
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textColor="@color/numberButton"
+        android:gravity="end"
+        android:ellipsize="end"
+        android:textSize="50sp"
+        android:singleLine="true"/>
 
-    <Button
-        android:id="@+id/buttonDivision"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="/"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonEgal" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/buttonEgal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="="
-        android:background="@color/colorPrimary"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button0" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="2"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toTopOf="@+id/button0"
-        app:layout_constraintStart_toEndOf="@+id/button1" />
+            <TextView
+                android:id="@+id/tvClear"
+                style="@style/actionButtonStyle"
+                android:text="@string/CE"/>
+            <TextView
+                android:id="@+id/tvOpen"
+                style="@style/actionButtonStyle"
+                android:text="@string/open"/>
+            <TextView
+                android:id="@+id/tvClose"
+                style="@style/actionButtonStyle"
+                android:text="@string/close"/>
+            <TextView
+                android:id="@+id/tvDivide"
+                style="@style/actionButtonStyle"
+                android:text="@string/divide"/>
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:text="1"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toTopOf="@+id/buttonVirgul"
-        app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonMoins"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="-"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toTopOf="@+id/buttonMultiplication"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button6" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:text="7"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/tvSeven"
+                style="@style/numberButtonStyle"
+                android:text="@string/seven"/>
+            <TextView
+                android:id="@+id/tvEight"
+                style="@style/numberButtonStyle"
+                android:text="@string/eight"/>
+            <TextView
+                android:id="@+id/tvNine"
+                style="@style/numberButtonStyle"
+                android:text="@string/nine"/>
+            <TextView
+                android:id="@+id/tvMul"
+                style="@style/actionButtonStyle"
+                android:text="@string/mul"/>
 
-    <Button
-        android:id="@+id/historique"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="histo"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintWidth_percent="0.50" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="3"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEgal"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/buttonVirgul"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="24dp"
-        android:text="Clear"
-        android:background="@color/colorPrimary"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/tvFour"
+                style="@style/numberButtonStyle"
+                android:text="@string/four"/>
+            <TextView
+                android:id="@+id/tvFive"
+                style="@style/numberButtonStyle"
+                android:text="@string/five"/>
+            <TextView
+                android:id="@+id/tvSix"
+                style="@style/numberButtonStyle"
+                android:text="@string/six"/>
+            <TextView
+                android:id="@+id/tvMinus"
+                style="@style/actionButtonStyle"
+                android:text="@string/mines"/>
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="8"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintStart_toEndOf="@+id/button7" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="6"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintStart_toEndOf="@+id/button5" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button0"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="0"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonVirgul" />
+            <TextView
+                android:id="@+id/tvOne"
+                style="@style/numberButtonStyle"
+                android:text="@string/one"/>
+            <TextView
+                android:id="@+id/tvTwo"
+                style="@style/numberButtonStyle"
+                android:text="@string/two"/>
+            <TextView
+                android:id="@+id/tvThree"
+                style="@style/numberButtonStyle"
+                android:text="@string/three"/>
+            <TextView
+                android:id="@+id/tvPlus"
+                style="@style/actionButtonStyle"
+                android:text="@string/plus"/>
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:text="4"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toTopOf="@+id/button1"
-        app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonMultiplication"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="*"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toTopOf="@+id/buttonDivision"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button3" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="5"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintStart_toEndOf="@+id/button4" />
+            <TextView
+                android:id="@+id/tvZero"
+                style="@style/numberButtonStyle"
+                android:text="@string/zero"/>
+            <TextView
+                android:id="@+id/tvDot"
+                style="@style/numberButtonStyle"
+                android:text="@string/dot"/>
+            <ImageView
+                android:id="@+id/tvBack"
+                style="@style/numberButtonStyle"
+                android:src="@drawable/backspace"
+                android:scaleType="center"
+                android:contentDescription="@string/backSpace"/>
+            <TextView
+                android:id="@+id/tvEquals"
+                style="@style/actionButtonStyle"
+                android:text="@string/equals"/>
 
-    <Button
-        android:id="@+id/buttonPlus"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="+"
-        app:layout_constraintWidth_percent="0.25"
-        app:layout_constraintBottom_toTopOf="@+id/buttonMoins"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button9" />
+        </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</LinearLayout>
