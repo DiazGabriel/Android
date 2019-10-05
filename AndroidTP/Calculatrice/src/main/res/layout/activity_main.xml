@@ -38,6 +38,7 @@
         android:text="Historique"/>
 
     <LinearLayout
+        android:id="@+id/buttonContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -51,19 +52,22 @@
             <TextView
                 android:id="@+id/tvClear"
                 style="@style/actionButtonStyle"
-                android:text="@string/CE"/>
+                android:text="@string/CE" />
+
             <TextView
                 android:id="@+id/tvOpen"
                 style="@style/actionButtonStyle"
-                android:text="@string/open"/>
+                android:text="@string/open" />
+
             <TextView
                 android:id="@+id/tvClose"
                 style="@style/actionButtonStyle"
-                android:text="@string/close"/>
+                android:text="@string/close" />
+
             <TextView
                 android:id="@+id/tvDivide"
                 style="@style/actionButtonStyle"
-                android:text="@string/divide"/>
+                android:text="@string/divide" />
 
         </LinearLayout>
 
@@ -76,19 +80,22 @@
             <TextView
                 android:id="@+id/tvSeven"
                 style="@style/numberButtonStyle"
-                android:text="@string/seven"/>
+                android:text="@string/seven" />
+
             <TextView
                 android:id="@+id/tvEight"
                 style="@style/numberButtonStyle"
-                android:text="@string/eight"/>
+                android:text="@string/eight" />
+
             <TextView
                 android:id="@+id/tvNine"
                 style="@style/numberButtonStyle"
-                android:text="@string/nine"/>
+                android:text="@string/nine" />
+
             <TextView
                 android:id="@+id/tvMul"
                 style="@style/actionButtonStyle"
-                android:text="@string/mul"/>
+                android:text="@string/mul" />
 
         </LinearLayout>
 
@@ -101,19 +108,22 @@
             <TextView
                 android:id="@+id/tvFour"
                 style="@style/numberButtonStyle"
-                android:text="@string/four"/>
+                android:text="@string/four" />
+
             <TextView
                 android:id="@+id/tvFive"
                 style="@style/numberButtonStyle"
-                android:text="@string/five"/>
+                android:text="@string/five" />
+
             <TextView
                 android:id="@+id/tvSix"
                 style="@style/numberButtonStyle"
-                android:text="@string/six"/>
+                android:text="@string/six" />
+
             <TextView
                 android:id="@+id/tvMinus"
                 style="@style/actionButtonStyle"
-                android:text="@string/mines"/>
+                android:text="@string/mines" />
 
         </LinearLayout>
 
@@ -126,19 +136,22 @@
             <TextView
                 android:id="@+id/tvOne"
                 style="@style/numberButtonStyle"
-                android:text="@string/one"/>
+                android:text="@string/one" />
+
             <TextView
                 android:id="@+id/tvTwo"
                 style="@style/numberButtonStyle"
-                android:text="@string/two"/>
+                android:text="@string/two" />
+
             <TextView
                 android:id="@+id/tvThree"
                 style="@style/numberButtonStyle"
-                android:text="@string/three"/>
+                android:text="@string/three" />
+
             <TextView
                 android:id="@+id/tvPlus"
                 style="@style/actionButtonStyle"
-                android:text="@string/plus"/>
+                android:text="@string/plus" />
 
         </LinearLayout>
 
@@ -151,32 +164,40 @@
             <TextView
                 android:id="@+id/tvZero"
                 style="@style/numberButtonStyle"
-                android:text="@string/zero"/>
+                android:text="@string/zero" />
+
             <TextView
                 android:id="@+id/tvDot"
                 style="@style/numberButtonStyle"
-                android:text="@string/dot"/>
+                android:text="@string/dot" />
+
             <ImageView
                 android:id="@+id/tvBack"
                 style="@style/numberButtonStyle"
-                android:src="@drawable/backspace"
+                android:contentDescription="@string/backSpace"
                 android:scaleType="center"
-                android:contentDescription="@string/backSpace"/>
+                android:src="@drawable/backspace" />
+
             <TextView
                 android:id="@+id/tvEquals"
                 style="@style/actionButtonStyle"
-                android:text="@string/equals"/>
+                android:text="@string/equals" />
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/my_view"
-            android:background="#d3d3d3"
-            android:orientation="vertical"
-            android:textSize="20sp"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="200dp">
-        </TextView>
+            android:layout_height="100dp">
+            <TextView
+                android:id="@+id/my_view"
+                android:background="@color/srollView"
+                android:orientation="vertical"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </TextView>
+        </ScrollView>
+
 
     </LinearLayout>
 

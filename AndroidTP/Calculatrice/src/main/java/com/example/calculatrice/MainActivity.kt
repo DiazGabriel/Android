@@ -9,11 +9,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
 import net.objecthunter.exp4j.ExpressionBuilder
 import android.view.animation.TranslateAnimation
+import android.widget.RelativeLayout
 import java.util.Collections.synchronizedList
-
-
-
-
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         vueHistorique = findViewById(R.id.my_view)
         boutonHistorique = findViewById(R.id.tvHistory)
+
         // on initialise la vue historique à invisible
         vueHistorique.setVisibility(View.INVISIBLE);
         boutonHistorique.setText("Historique");
@@ -128,6 +129,7 @@ class MainActivity : AppCompatActivity() {
         animate.duration = 500
         animate.fillAfter = true
         view.startAnimation(animate)
+
     }
 
     fun slideDown(view: View) {

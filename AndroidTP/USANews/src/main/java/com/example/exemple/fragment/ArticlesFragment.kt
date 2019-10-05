@@ -27,8 +27,8 @@ class ArticlesFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_articles, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         GlobalScope.launch {
             getData()
         }
@@ -55,61 +55,4 @@ class ArticlesFragment : Fragment() {
         }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        root = view
-        bindRecyclerView(view)
-
-        // Spinner désactivé. On verra ce qu'on en fais plus tard... ou pas
-        // bindSpinner(view)
-    }
-
-    private fun bindRecyclerView(view: View){
-
-        val listArticles = listOf(
-            Article("Article 1", "Cet article est génial"),
-            Article("Article 2", "Cet article est nul.. :-(")
-        )
-
-        val recyclerView: RecyclerView = view.findViewById(R.id.recycler_view)
-        val adapterRecycler = ArticleAdapter(listArticles)
-        recyclerView.layoutManager = LinearLayoutManager(view.context)
-        recyclerView.adapter = adapterRecycler
-    }
-
-    private fun bindSpinner(view: View){
-
-        //recupérer une liste de string depuis les ressources
-        val planetes = resources.getStringArray(R.array.planetes)
-
-        //recupérer l'instance du spinner dans la vue
-        val spinner : Spinner = view.findViewById(R.id.spinner)
-
-        //instancier l'adapteur
-        val adapter = ArrayAdapter(view.context, android.R.layout.simple_spinner_item, planetes)
-
-        //associer l'adapter au spinner
-        spinner.adapter = adapter
-
-        //Listener quand l'utilisateur selectionne un élément
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-                Toast.makeText(view.context, "Vous n'avez rien selectionné", Toast.LENGTH_LONG)
-                        .show()
-            }
-
-            override fun onItemSelected(
-                    adapter: AdapterView<*>?,
-                    view: View?,
-                    position: Int,
-                    id: Long
-            ) {
-                Toast.makeText(
-                        context,
-                        "Vous avez selectionné ${planetes[position]}",
-                        Toast.LENGTH_LONG
-                ).show()
-            }
-        }
-    }
 }
