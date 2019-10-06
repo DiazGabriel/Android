@@ -3,9 +3,11 @@ package com.example.exemple.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exemple.R
+import com.squareup.picasso.Picasso
 
 class ArticleAdapter(private val dataset: List<Article>) : RecyclerView.Adapter<ArticleAdapter.ViewHolder>() {
 
@@ -18,6 +20,9 @@ class ArticleAdapter(private val dataset: List<Article>) : RecyclerView.Adapter<
         fun bind(item: Article) {
             val txtTitle = root.findViewById<TextView>(R.id.Titre)
             val txtDesc = root.findViewById<TextView>(R.id.Texte)
+            val Image = root.findViewById<ImageView>(R.id.imageView)
+            //utilisation de la librarie Picasso pour charger les images depuis une URL
+            Picasso.get().load(item.urlToImage).into(Image)
             txtTitle.text = item.title
             txtDesc.text = item.content
         }
